@@ -144,6 +144,7 @@ export default function Header() {
       <WalletConnectModal
         isOpen={isWalletModalOpen}
         onClose={() => setIsWalletModalOpen(false)}
+        onConnect={() => {}}
       />
     </header>
   );
