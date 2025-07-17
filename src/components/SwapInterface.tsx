@@ -1543,18 +1543,6 @@ function TokenSelector({
                           {token.name}
                         </div>
                       </div>
-                      <div className="text-right">
-                        <div className="font-medium">{token.price}</div>
-                        <div
-                          className={`text-xs ${
-                            token.change.startsWith("+")
-                              ? "text-green-500"
-                              : "text-red-500"
-                          }`}
-                        >
-                          {token.change}
-                        </div>
-                      </div>
                     </div>
                   </SelectItem>
                 ))}
