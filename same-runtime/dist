@@ -1,0 +1,3 @@
+// same-runtime/dist/jsx-runtime.js
+export * from "react/jsx-runtime";
+export { default } from "react/jsx-runtime";

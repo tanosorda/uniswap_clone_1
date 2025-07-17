@@ -2,7 +2,14 @@
 
 import { useEffect, useState } from "react";
 
-const ICONS = [
+type BaseIcon = {
+  src: string;
+  delay: string;
+  top?: string;
+  left?: string;
+};
+
+const ICONS: BaseIcon[] = [
   {
     src: "https://assets.coingecko.com/coins/images/12504/standard/uniswap-logo.png?1720676669",
     delay: "0s",
@@ -50,10 +57,11 @@ const ICONS = [
 ];
 
 export default function FloatingIconsBackground() {
-  const [icons, setIcons] = useState<typeof ICONS | null>(null);
+  // теперь state хранит массив BaseIcon с гарантированными top/left
+  const [icons, setIcons] = useState<BaseIcon[] | null>(null);
 
   useEffect(() => {
-    const randomized = ICONS.map((icon) => ({
+    const randomized: BaseIcon[] = ICONS.map((icon) => ({
       ...icon,
       top: `${Math.random() * 95}%`,
       left: `${Math.random() * 95}%`,
@@ -61,7 +69,7 @@ export default function FloatingIconsBackground() {
     setIcons(randomized);
   }, []);
 
-  if (!icons) return null; // до монтирования ничего не рендерим
+  if (!icons) return null;
 
   return (
     <div className="absolute inset-0 overflow-hidden -z-10 pointer-events-none">
@@ -71,8 +79,8 @@ export default function FloatingIconsBackground() {
           src={icon.src}
           className="absolute w-20 h-20 opacity-30 blur-sm animate-floating"
           style={{
-            top: icon.top,
-            left: icon.left,
+            top: icon.top!,
+            left: icon.left!,
             animationDelay: icon.delay,
           }}
           alt={`floating icon ${i}`}

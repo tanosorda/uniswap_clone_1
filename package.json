@@ -8,9 +8,10 @@
     "start": "next start",
     "lint": "bunx tsc --noEmit && next lint",
     "format": "bunx biome format --write",
-    "vercel-build": "npm run build"  
+    "vercel-build": "npm run build"
   },
   "dependencies": {
+    "same-runtime": "file:./same-runtime",
     "@radix-ui/react-dialog": "^1.1.14",
     "@radix-ui/react-dropdown-menu": "^2.1.15",
     "@radix-ui/react-select": "^2.2.5",
@@ -36,7 +37,7 @@
     "tailwindcss": "^3.4.17",
     "typescript": "^5.8.3"
   },
-  "engines": {  
+  "engines": {
     "node": ">=18.0.0",
     "npm": ">=9.0.0"
   }
