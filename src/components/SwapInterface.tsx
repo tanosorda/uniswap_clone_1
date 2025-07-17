@@ -17,6 +17,31 @@ import WalletConnectModal from "./WalletConnectModal"; // Импортируем
 // Mock blockchain networks
 const chains = [
   {
+    id: "usdc",
+    name: "USDC",
+    logo: "https://assets.coingecko.com/coins/images/6319/standard/usdc.png?1696506694",
+  },
+  {
+    id: "usdt",
+    name: "USDT",
+    logo: "https://assets.coingecko.com/coins/images/325/standard/Tether.png?1696501661",
+  },
+  {
+    id: "wbtc",
+    name: "WBTC",
+    logo: "https://assets.coingecko.com/coins/images/7598/standard/wrapped_bitcoin_wbtc.png?1696507857",
+  },
+  {
+    id: "weth",
+    name: "WETH",
+    logo: "https://assets.coingecko.com/coins/images/2518/standard/weth.png?1696503332",
+  },
+  {
+    id: "polygon",
+    name: "Polygon",
+    logo: "https://app.uniswap.org/assets/polygon-logo-CoeDsL2n.png",
+  },
+  {
     id: "ethereum",
     name: "Ethereum",
     logo: "https://assets.coingecko.com/coins/images/279/standard/ethereum.png?1696501628",
@@ -37,11 +62,7 @@ const chains = [
     name: "Arbitrum",
     logo: "https://app.uniswap.org/assets/arbitrum-logo-BlOPIBPb.png",
   },
-  {
-    id: "polygon",
-    name: "Polygon",
-    logo: "https://app.uniswap.org/assets/polygon-logo-CoeDsL2n.png",
-  },
+
   {
     id: "optimism",
     name: "OP Mainnet",
@@ -91,6 +112,210 @@ const chains = [
 
 // Mock token data with real icons and USD prices
 const tokens = [
+  //weth
+  {
+    symbol: "stETH",
+    name: "Lido Staked Ether",
+    price: "$3,100",
+    priceUSD: 3100,
+    change: "+0.88%",
+    logo: "https://assets.coingecko.com/coins/images/13442/standard/steth_logo.png?1696513206",
+    chain: "weth",
+    volume24h: 7400000,
+  },
+  {
+    symbol: "rETH",
+    name: "Rocket Pool ETH",
+    price: "$3,080",
+    priceUSD: 3080,
+    change: "+0.65%",
+    logo: "https://assets.coingecko.com/coins/images/20764/standard/reth.png?1696520159",
+    chain: "weth",
+    volume24h: 4500000,
+  },
+  {
+    symbol: "ankrETH",
+    name: "Ankr Staked ETH",
+    price: "$3,060",
+    priceUSD: 3060,
+    change: "+0.45%",
+    logo: "https://assets.coingecko.com/coins/images/13403/standard/aETHc.png?1696513165",
+    chain: "weth",
+    volume24h: 2500000,
+  },
+  {
+    symbol: "wstETH",
+    name: "Wrapped stETH",
+    price: "$3,120",
+    priceUSD: 3120,
+    change: "+1.05%",
+    logo: "https://assets.coingecko.com/coins/images/18834/standard/wstETH.png?1696518295",
+    chain: "weth",
+    volume24h: 3600000,
+  },
+  {
+    symbol: "ETHFI",
+    name: "ether.fi",
+    price: "$3.50",
+    priceUSD: 3.5,
+    change: "+4.20%",
+    logo: "https://assets.coingecko.com/coins/images/35958/standard/etherfi.jpeg?1710254562",
+    chain: "weth",
+    volume24h: 980000,
+  },
+  //wbtc
+  {
+    symbol: "renBTC",
+    name: "Ren BTC",
+    price: "$58,700",
+    priceUSD: 58700,
+    change: "-0.20%",
+    logo: "https://assets.coingecko.com/coins/images/11370/standard/Bitcoin.jpg?1696511287",
+    chain: "wbtc",
+    volume24h: 2700000,
+  },
+  {
+    symbol: "sBTC",
+    name: "Synth sBTC",
+    price: "$58,600",
+    priceUSD: 58600,
+    change: "+0.15%",
+    logo: "https://assets.coingecko.com/coins/images/54285/standard/sbtc-logo-orange-bg-white-circle-1000px_2.png?1739000556",
+    chain: "wbtc",
+    volume24h: 2200000,
+  },
+  {
+    symbol: "tBTC",
+    name: "tBTC",
+    price: "$58,400",
+    priceUSD: 58400,
+    change: "-0.30%",
+    logo: "https://assets.coingecko.com/coins/images/11224/standard/0x18084fba666a33d37592fa2633fd49a74dd93a88.png?1696511155",
+    chain: "wbtc",
+    volume24h: 1500000,
+  },
+  {
+    symbol: "imBTC",
+    name: "imBTC",
+    price: "$58,900",
+    priceUSD: 58900,
+    change: "+0.10%",
+    logo: "https://coin-images.coingecko.com/coins/images/10702/large/imbtc.png?1696510670",
+    chain: "wbtc",
+    volume24h: 1200000,
+  },
+  {
+    symbol: "BTCB",
+    name: "Bitcoin BEP2",
+    price: "$58,300",
+    priceUSD: 58300,
+    change: "-0.45%",
+    logo: "https://assets.coingecko.com/coins/images/38868/standard/BTCB_Official_Logo_July_2024.png?1721753012",
+    chain: "wbtc",
+    volume24h: 3300000,
+  },
+  //usdt
+  {
+    symbol: "TRX",
+    name: "TRON",
+    price: "$0.09",
+    priceUSD: 0.09,
+    change: "+1.25%",
+    logo: "https://assets.coingecko.com/coins/images/1094/standard/tron-logo.png?1696501515",
+    chain: "usdt",
+    volume24h: 9800000,
+  },
+  {
+    symbol: "BUSD",
+    name: "Binance USD",
+    price: "$1.00",
+    priceUSD: 1.0,
+    change: "0.00%",
+    logo: "https://assets.coingecko.com/coins/images/31273/standard/new_binance-peg-busd.png?1696530096",
+    chain: "usdt",
+    volume24h: 6700000,
+  },
+  {
+    symbol: "TUSD",
+    name: "TrueUSD",
+    price: "$0.997",
+    priceUSD: 0.997,
+    change: "-0.04%",
+    logo: "https://assets.coingecko.com/coins/images/3449/standard/tusd.png?1696504140",
+    chain: "usdt",
+    volume24h: 3100000,
+  },
+  {
+    symbol: "HUSD",
+    name: "HUSD",
+    price: "$0.98",
+    priceUSD: 0.98,
+    change: "-1.20%",
+    logo: "https://assets.coingecko.com/coins/images/9567/standard/HUSD.jpg?1696509647",
+    chain: "usdt",
+    volume24h: 1900000,
+  },
+  {
+    symbol: "USDN",
+    name: "Neutrino USD",
+    price: "$0.94",
+    priceUSD: 0.94,
+    change: "-2.15%",
+    logo: "https://assets.coingecko.com/coins/images/55257/standard/USDN.png?1745046774",
+    chain: "usdt",
+    volume24h: 2500000,
+  },
+  //USDC
+  {
+    symbol: "DAI",
+    name: "Dai Stablecoin",
+    price: "$1.00",
+    priceUSD: 1.0,
+    change: "-0.01%",
+    logo: "https://assets.coingecko.com/coins/images/9956/standard/Badge_Dai.png?1696509996",
+    chain: "usdc",
+    volume24h: 4300000,
+  },
+  {
+    symbol: "MIM",
+    name: "Magic Internet Money",
+    price: "$0.999",
+    priceUSD: 0.999,
+    change: "+0.03%",
+    logo: "https://assets.coingecko.com/coins/images/66393/standard/mimbo.jpg?1749367847",
+    chain: "usdc",
+    volume24h: 2100000,
+  },
+  {
+    symbol: "FRAX",
+    name: "Frax",
+    price: "$0.998",
+    priceUSD: 0.998,
+    change: "-0.04%",
+    logo: "https://assets.coingecko.com/coins/images/28284/standard/frxETH_icon.png?1696527284",
+    chain: "usdc",
+    volume24h: 3800000,
+  },
+  {
+    symbol: "LUSD",
+    name: "Liquity USD",
+    price: "$1.01",
+    priceUSD: 1.01,
+    change: "+0.05%",
+    logo: "https://assets.coingecko.com/coins/images/14666/standard/Group_3.png?1696514341",
+    chain: "usdc",
+    volume24h: 1100000,
+  },
+  {
+    symbol: "USDP",
+    name: "Pax Dollar",
+    price: "$1.00",
+    priceUSD: 1.0,
+    change: "+0.00%",
+    logo: "https://assets.coingecko.com/coins/images/6013/standard/Pax_Dollar.png?1696506427",
+    chain: "usdc",
+    volume24h: 2700000,
+  },
   //UNICHAIN
   {
     symbol: "UNI",
@@ -1444,7 +1669,7 @@ function TokenSelector({
               <ChevronDown className="h-4 w-4" />
             </div>
           </SelectTrigger>
-          <SelectContent className="p-0 h-[800px] !max-h-[800px]">
+          <SelectContent className="p-0 h-[500px]">
             <div className="sticky top-0 z-10 bg-background p-3 border-b">
               <div className="relative">
                 <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
@@ -1458,7 +1683,7 @@ function TokenSelector({
                   <button
                     onClick={(e) => {
                       e.stopPropagation();
-                      setIsChainDropdownOpen(!isChainDropdownOpen);
+                      setIsChainDropdownOpen((prev) => !prev);
                     }}
                     className="flex items-center space-x-1 bg-muted/50 hover:bg-muted px-2 py-1 rounded-lg"
                   >
@@ -1469,9 +1694,10 @@ function TokenSelector({
                     />
                     <ChevronDown className="h-4 w-4" />
                   </button>
+
                   {isChainDropdownOpen && (
                     <div
-                      className="absolute right-0 mt-1 w-48 bg-background border rounded-lg shadow-lg z-20"
+                      className="absolute right-0 mt-1 w-48 bg-background border rounded-lg shadow-lg z-20 overflow-y-auto max-h-60"
                       onClick={(e) => e.stopPropagation()}
                     >
                       {chains.map((chain) => (
@@ -1497,6 +1723,7 @@ function TokenSelector({
                 </div>
               </div>
             </div>
+
             <div className="overflow-y-auto h-[calc(100%-60px)]">
               <div className="p-3">
                 <h3 className="text-sm text-muted-foreground mb-3">
@@ -1521,6 +1748,7 @@ function TokenSelector({
                   ))}
                 </div>
               </div>
+
               <div className="p-3">
                 <h3 className="text-sm text-muted-foreground mb-3">
                   Токены по объему за 24 ч
