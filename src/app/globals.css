@@ -67,8 +67,8 @@
 /* globals.css */
 @layer components {
   .custom-select-content {
-    height: 600px !important;
-    max-height: 600px !important;
+    height: 1000px !important;
+    max-height: 1000px !important;
   }
 }
 

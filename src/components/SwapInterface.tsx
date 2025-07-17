@@ -1444,7 +1444,7 @@ function TokenSelector({
               <ChevronDown className="h-4 w-4" />
             </div>
           </SelectTrigger>
-          <SelectContent className="p-0 h-[600px]">
+          <SelectContent className="p-0 h-[800px] !max-h-[800px]">
             <div className="sticky top-0 z-10 bg-background p-3 border-b">
               <div className="relative">
                 <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
