@@ -26,26 +26,7 @@ const chains = [
     name: "Unichain",
     logo: "https://app.uniswap.org/assets/unichain-logo-B-lwXybJ.png",
   },
-  {
-    id: "usdc",
-    name: "USDC",
-    logo: "https://assets.coingecko.com/coins/images/6319/standard/usdc.png?1696506694",
-  },
-  {
-    id: "usdt",
-    name: "USDT",
-    logo: "https://assets.coingecko.com/coins/images/325/standard/Tether.png?1696501661",
-  },
-  {
-    id: "wbtc",
-    name: "WBTC",
-    logo: "https://assets.coingecko.com/coins/images/7598/standard/wrapped_bitcoin_wbtc.png?1696507857",
-  },
-  {
-    id: "weth",
-    name: "WETH",
-    logo: "https://assets.coingecko.com/coins/images/2518/standard/weth.png?1696503332",
-  },
+
   {
     id: "base",
     name: "Base",
